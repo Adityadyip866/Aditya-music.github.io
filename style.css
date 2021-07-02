@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #fff);
+  border-radius: 50px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-player-div,
+.music-list {
+  height: 400px;
+  width: 350px;
+  box-shadow: 0 0 5px #fff;
+  border-radius: 20px;
+  padding-top: 1px;
+}
+
+.music-player-top-icon {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 20px;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.music-player-top-icon:hover {
+  background: gold;
+}
+
+#musicTitle,
+.songs-list-h4 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  margin-top: 15px;
+  color: #fff;
+  opacity: 0.9;
+  overflow: hidden;
+  user-select: none;
+}
+
+#musicArtist {
+  text-align: center;
+  color: #888;
+  user-select: none;
+}
+
+.clip-art {
+  height: 40%;
+  width: 50%;
+  background-color: #111;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+  opacity: 0.8;
+}
+
+.clip-art img {
+  height: 100%;
+  width: 100%;
+}
+
+.music-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 40px;
+}
+
+.music-control div {
+  cursor: pointer;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.music-control div:hover,
+.music-control div:focus {
+  background: cyan;
+}
+
+.music-footer {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+/*animation*/
+
+.animatePlayer {
+  animation: circularRotate 10s infinite linear;
+}
+
+@keyframes circularRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Css For Music List*/
+.music-list .musics {
+  width: 90%;
+  margin: auto;
+}
+
+.musics-ul {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 330px;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.musics-ul li {
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.2s linear;
+  border-radius: 5px;
+}
+
+.musics-ul li:hover,
+.musics-ul li:focus {
+  color: #111;
+  background: #fff;
+  padding-left: 10px;
+}
